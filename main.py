@@ -4,6 +4,7 @@ import random
 
 def congratulate_user():
     print("= Congratulations! You won! =")
+    print(f"=============================")
     print(f"Congratulations! You won! your words = {guesses}")
     print("=============================")
 

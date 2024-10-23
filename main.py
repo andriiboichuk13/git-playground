@@ -3,7 +3,6 @@ import random
 
 
 def congratulate_user():
-    print("= Congratulations! You won! =")
     print(f"=============================")
     print(f"Congratulations! You won! your words = {guesses}")
     print("=============================")
@@ -31,7 +30,9 @@ print(f"Your word is '{word}'")
 
 while not is_game_over():
     guess = input("Your next take: ")
-    if guess in full_list:
+    if guess in guesses:
+        print(f'{guess} was already guessed')
+    elif guess in full_list:
         guessed += 1
         guesses.append(guess)
         if guessed == WORDS_TO_WIN:
